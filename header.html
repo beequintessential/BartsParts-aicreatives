@@ -1,0 +1,198 @@
+<header class="header" role="banner">
+  <div class="header-cta">
+    <div class="container">
+
+      <!-- start language switcher -->
+      <div class="header-cta__language navPages-item navPages-item--language">
+        <a class="navPages-action has-subMenu" href="#" data-collapsible="navPages-language" aria-controls="navPages-language" aria-expanded="false">
+          <div class="f32_{{getVar "barts_lang"}}"></div>
+          {{!-- {{getVar "barts_lang"}} --}}
+        </a>
+        <div class="navPage-subMenu" id="navPages-language" aria-hidden="true" tabindex="-1">
+          <ul class="navPage-subMenu-list">
+            {{#unless (getVar "barts_lang") '===' 'de'}}
+            <li class="navPage-subMenu-item">
+              <a class="navPage-subMenu-action navPages-action" hreflang="de" href="https://de.bartsparts.com{{#or (if page_type 'product') (if page_type 'brands') (if page_type 'brand') (if page_type 'page') (if page_type 'login') (if page_type 'cart')}}{{settings.request.absolute_path}}{{/or}}{{#or (if page_type 'blog') (if page_type 'blog_post')}}/blog/{{/or}}">
+                {{#if is_active}}
+                  <div class="f32_de"></div> <strong>Deutsch</strong>
+                {{else}}
+                  <div class="f32_de"></div> Deutsch
+                {{/if}}
+              </a>
+            </li>
+            {{/unless}}
+            {{#unless (getVar "barts_lang") '===' 'en'}}
+            <li class="navPage-subMenu-item">
+              <a class="navPage-subMenu-action navPages-action" hreflang="en" href="https://bartsparts.com{{#or (if page_type 'product') (if page_type 'brands') (if page_type 'brand') (if page_type 'page') (if page_type 'login') (if page_type 'cart')}}{{settings.request.absolute_path}}{{/or}}{{#or (if page_type 'blog') (if page_type 'blog_post')}}/blog/{{/or}}">
+                {{#if is_active}}
+                  <div class="f32_en"></div> <strong>English</strong>
+                {{else}}
+                  <div class="f32_en"></div> English
+                {{/if}}
+              </a>
+            </li>
+            {{/unless}}
+            {{#unless (getVar "barts_lang") '===' 'es'}}
+            <li class="navPage-subMenu-item">
+              <a class="navPage-subMenu-action navPages-action" hreflang="es-es" href="https://es.bartsparts.com{{#or (if page_type 'product') (if page_type 'brands') (if page_type 'brand') (if page_type 'page') (if page_type 'login') (if page_type 'cart')}}{{settings.request.absolute_path}}{{/or}}{{#or (if page_type 'blog') (if page_type 'blog_post')}}/blog/{{/or}}">
+                {{#if is_active}}
+                  <div class="f32_es"></div> <strong>Español</strong>
+                {{else}}
+                  <div class="f32_es"></div>  Español
+                {{/if}}
+              </a>
+            </li>
+            {{/unless}}
+            {{#unless (getVar "barts_lang") '===' 'fr'}}
+            <li class="navPage-subMenu-item">
+              <a class="navPage-subMenu-action navPages-action" hreflang="fr" href="https://fr.bartsparts.com{{#or (if page_type 'product') (if page_type 'brands') (if page_type 'brand') (if page_type 'page') (if page_type 'login') (if page_type 'cart')}}{{settings.request.absolute_path}}{{/or}}{{#or (if page_type 'blog') (if page_type 'blog_post')}}/blog/{{/or}}">
+                {{#if is_active}}
+                  <div class="f32_fr"></div> <strong>français</strong>
+                {{else}}
+                  <div class="f32_fr"></div> français
+                {{/if}}
+              </a>
+            </li>
+            {{/unless}}
+            {{#unless (getVar "barts_lang") '===' 'nl'}}
+            <li class="navPage-subMenu-item">
+              <a class="navPage-subMenu-action navPages-action" hreflang="nl" href="https://nl.bartsparts.com{{#or (if page_type 'product') (if page_type 'brands') (if page_type 'brand') (if page_type 'page') (if page_type 'login') (if page_type 'cart')}}{{settings.request.absolute_path}}{{/or}}{{#or (if page_type 'blog') (if page_type 'blog_post')}}/blog/{{/or}}">
+                {{#if is_active}}
+                  <div class="f32_nl"></div> <strong>Nederlands</strong>
+                {{else}}
+                  <div class="f32_nl"></div> Nederlands
+                {{/if}}
+              </a>
+            </li>
+            {{/unless}}
+          </ul>
+        </div>
+      </div>
+      <!-- end language switcher -->
+
+      <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/navigation-menu}}
+      </div>
+      <div class="navUser-wrap">
+        {{> components/common/navigation}}
+      </div>
+
+    </div>
+  </div>
+  <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+    <span class="mobileMenu-toggleIcon"></span>
+  </a>
+
+  <div class="header-logo--wrap">
+    <div class="header-logo {{#if theme_settings.logo_size '===' 'original'}}logo-full-size{{/if}}">
+
+      <div class="logo-and-toggle">
+        <div class="desktopMenu-toggle">
+          <a href="javascript:void(0);" class="mobileMenu-toggle">
+            <span class="mobileMenu-toggleIcon"></span>
+          </a>
+        </div>
+
+
+        {{#if settings.request.absolute_path '===' '/'}}
+            <div class="logo-wrap">{{> components/common/store-logo}}</div>
+        {{else}}
+            <div class="logo-wrap">{{> components/common/store-logo}}</div>
+        {{/if}}
+      </div>
+
+      <div class="header-brands">
+        <ul>
+          <li>
+            <a href="/john-deere" alt="John Deere" title="John Deere">
+                <div class="image-wrap">
+                  <img class="lazyload" width="200" height="200"  data-sizes="auto" src="https://store-77uyis7lbs.mybigcommerce.com/content/images/brands/john-deere.png" alt="John Deere" title="John Deere">
+                </div>
+            </a>
+          </li>
+          <li>
+            <a href="/fendt" alt="Fendt" title="Fendt">
+                <div class="image-wrap">
+                  <img class="lazyload" width="200" height="200" data-sizes="auto" src="https://store-77uyis7lbs.mybigcommerce.com/content/images/brands/fendt.png" alt="Fendt" title="Fendt">
+                </div>
+            </a>
+          </li>
+          <li>
+            <a href="/case-ih" alt="Case IH" title="Case IH">
+                <div class="image-wrap">
+                  <img class="lazyload" width="200" height="200"  data-sizes="auto" src="https://store-77uyis7lbs.mybigcommerce.com/content/images/brands/case-ih.png" alt="Case IH" title="Case IH">
+                </div>
+            </a>
+          </li>
+          <li>
+            <a href="/new-holland" alt="New Holland" title="New Holland">
+                <div class="image-wrap">
+                  <img class="lazyload"  width="200" height="200"  data-sizes="auto" src="https://store-77uyis7lbs.mybigcommerce.com/content/images/brands/new-holland.png" alt="New Holland" title="New Holland">
+                </div>
+            </a>
+          </li>
+          <li>
+            <a href="/claas" alt="CLAAS" title="CLAAS">
+                <div class="image-wrap">
+                  <img class="lazyload" width="200" height="200"  data-sizes="auto" src="https://store-77uyis7lbs.mybigcommerce.com/content/images/brands/claas.png" alt="CLAAS" title="CLAAS">
+                </div>
+            </a>
+          </li>
+          <li>
+            <a href="/brands" alt="All Brands" title="All Brands">
+              <div class="image-wrap">
+                <img class="lazyload"  width="200" height="200"  data-sizes="auto" src="{{cdn 'img/icon-all-brands.png'}}" alt="All Brands" title="All Brands">
+              </div>
+              <span>{{lang 'header.all_brands'}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-search">
+    <div class="container">
+      <div class="quickSearchWrap" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+        {{> components/common/quick-search}}
+      </div>
+    </div>
+  </div>
+  {{{region name="header_bottom"}}}
+</header>
+
+{{!-- <div class="campaign-banner">
+  <div class="container">
+    {{#if page_type '===' 'product'}}
+      <img class="phone-only" src="https://bartsparts.com/content/campaigns/2022-12-01-bartsfriday/en.png" alt="" title="">
+      <img class="non-phone-only" src="https://bartsparts.com/content/campaigns/2022-12-01-bartsfriday/nl-pdp.png" alt="" title="">
+    {{else}}
+      <img src="https://bartsparts.com/content/campaigns/2022-12-01-bartsfriday/en.png" alt="" title="">
+    {{/if}}
+  </div>
+</div> --}}
+
+{{#or (if page_type 'brand') (if page_type 'brands')}}
+<div class="header__top-image" style="background-image: url({{getImage (cdn 'assets/img/BAR_ProductP_Header.jpg')}});">
+  <div class="container">
+    <div class="header__top-image-title">{{{lang 'header.header_top_slogan'}}}</div>
+  </div>
+</div>
+{{/or}}
+
+{{#unless page_type '===' 'default'}}
+  {{#if banners.top}}
+    <div class="banners" data-banner-location="top">
+      {{#each (limit banners.top_metadata 1)}}
+        <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+          <div data-event-type="promotion-click">
+            {{{this.content}}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+
+{{/unless}}
+
+{{{region name="header_bottom"}}}
